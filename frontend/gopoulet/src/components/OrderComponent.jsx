@@ -3,11 +3,18 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import roastedChicken from '../assets/img/cuisse-de-poulet.png';
 import logo from '../assets/img/logo.png';
+import { v4 as uuidv4 } from 'uuid';
 
 const OrderComponent = () => {
   const navigate = useNavigate();
 
   const handleOrderClick = () => {
+    // Génération d'un ID unique pour la commande
+    const orderId = uuidv4();
+    
+    // Stockage de l'ID de la commande dans le stockage de session
+    sessionStorage.setItem('orderId', orderId);
+
     // Redirige vers la page Commande pour le traitement
     navigate('/commande');
   };
