@@ -2,6 +2,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import roastedChicken from '../assets/img/cuisse-de-poulet.png';
+import logo from '../assets/img/logo.png';
 
 const OrderComponent = () => {
   const navigate = useNavigate();
@@ -14,6 +15,7 @@ const OrderComponent = () => {
   return (
     <div style={styles.pageContainer}>
       <div style={styles.container}>
+      <img src={logo} alt="GO POULET" style={styles.logo} />
         <img src={roastedChicken} alt="Poulet Rôti" style={styles.image} />
         <h2 style={styles.textHeader}>La faim n'attend pas.</h2>
         <p style={styles.text}>Votre poulet, si !</p>
@@ -32,7 +34,7 @@ const styles = {
     justifyContent: 'center',
     height: '100vh',
     width: '100vw',
-    backgroundColor: '#000', 
+    backgroundColor: '#141414', 
   },
   container: {
     display: 'flex',
@@ -44,16 +46,24 @@ const styles = {
     borderRadius: '1em',
     boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
     maxWidth: '20em',
-    // Centrez le contenu à l'intérieur du conteneur
   },
   image: {
-    maxWidth: '100%',
+    maxWidth: '70%',
     marginBottom: '1.25em',
+  },
+  logo: {
+    maxWidth: '40%',
+    marginBottom: '1.25em',
+  },
+  textTitle: {
+    margin: '0',
+    fontSize: '2em',
+    color: '#',
   },
   textHeader: {
     margin: '0',
     fontSize: '1.125em',
-    color: '#000',
+    color: '#141414',
     fontWeight: 'bold',
   },
   text: {
@@ -68,7 +78,7 @@ const styles = {
     color: '#fff',
     backgroundColor: '#4CAF50',
     border: 'none',
-    borderRadius: '5px',
+    borderRadius: '0.313em',
     cursor: 'pointer',
   },
 };
