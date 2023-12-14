@@ -1,7 +1,7 @@
 // src/components/OrderComponent.jsx
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import roastedChicken from '../assets/img/cuisse-de-poulet.png'; // Assurez-vous que le chemin est correct
+import roastedChicken from '../assets/img/cuisse-de-poulet.png';
 
 const OrderComponent = () => {
   const navigate = useNavigate();
@@ -12,18 +12,28 @@ const OrderComponent = () => {
   };
 
   return (
-    <div style={styles.container}>
-      <img src={roastedChicken} alt="Poulet Rôti" style={styles.image} />
-      <h2 style={styles.textHeader}>La faim n'attend pas.</h2>
-      <p style={styles.text}>Votre poulet, si !</p>
-      <button style={styles.button} onClick={handleOrderClick}>
-        Commander un poulet
-      </button>
+    <div style={styles.pageContainer}>
+      <div style={styles.container}>
+        <img src={roastedChicken} alt="Poulet Rôti" style={styles.image} />
+        <h2 style={styles.textHeader}>La faim n'attend pas.</h2>
+        <p style={styles.text}>Votre poulet, si !</p>
+        <button style={styles.button} onClick={handleOrderClick}>
+          Commander un poulet
+        </button>
+      </div>
     </div>
   );
 };
 
 const styles = {
+  pageContainer: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    height: '100vh',
+    width: '100vw',
+    backgroundColor: '#000', 
+  },
   container: {
     display: 'flex',
     flexDirection: 'column',
@@ -34,6 +44,7 @@ const styles = {
     borderRadius: '1em',
     boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
     maxWidth: '20em',
+    // Centrez le contenu à l'intérieur du conteneur
   },
   image: {
     maxWidth: '100%',
