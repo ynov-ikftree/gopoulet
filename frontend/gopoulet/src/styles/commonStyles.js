@@ -7,7 +7,7 @@ const commonStyles = {
       justifyContent: 'center',
       height: '100vh',
       width: '100vw',
-      backgroundColor: '#000', // Adapté de votre interface utilisateur
+      backgroundColor: '#000',
     },
     contentContainer: {
       padding: '20px',
@@ -15,7 +15,7 @@ const commonStyles = {
       borderRadius: '10px',
       boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
       maxWidth: '300px',
-      textAlign: 'center', // Centrer le texte à l'intérieur du conteneur
+      textAlign: 'center',
       color: '#141414',
     },
     image: {
